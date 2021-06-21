@@ -59,33 +59,7 @@
                 <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#exam">START
                     EXAM
                 </button>
-
-
             </div>
-
-            <!-- Collapsable view -->
-            {#            <div id="exam" class="collapse">#}
-            {#                <!-- Retrieve all lessons associated with course -->#}
-            {#                {% for lesson in object.lesson_set.all %}#}
-            {#                    <div class="card-columns-vertical">#}
-            {#                    <div class="card mt-1">#}
-            {#                    <h3 class="card-header">Course: {{ lesson.title }}</h3>#}
-            {#                    <!-- Retrieve all questions associated with lesson -->#}
-            {#                    {% for question in lesson.question_set.all %}#}
-            {#                        <div class="card-body">#}
-            {#                        <h4>Question: {{ question.question_text }}</h4>#}
-            {#                        </div>#}
-            {#                        <!-- Retrieve all choices associated with question -->#}
-            {#                        {% for choice in question.choice_set.all %}#}
-            {#                            <p>{{ choice.choice_text }}#}
-            {#                            <input type="check" name="choice_{{choice.id}}" id="{{choice.id}}">#}
-            {#                        {% endfor %} <!-- End choices -->#}
-            {#                    {% endfor %} <!-- End lessons -->#}
-            {#                    </div>#}
-            {#                    </div>#}
-            {#                {% endfor %} <!-- End lessons -->#}
-
-
             <form id="questionform" action="submit/" method="post">
                 {% for lesson in object.lesson_set.all %}
                     {% for question in lesson.question_set.all %}
